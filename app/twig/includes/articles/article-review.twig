@@ -1,0 +1,16 @@
+<article class="article-review">
+    <div class="article-review__left">
+        <p class="article-review__user">{{ article.user }}</p>
+
+        <div class="article-review__numbers">
+            <a href="#prev" class="article-review__arrow-left js-reviews-carousel-slide"></a>
+            <span class="article-review__current">{{ article.current }}</span>
+            <span>/</span>
+            <span class="article-review__count">{{ count }}</span>
+            <a href="#next" class="article-review__arrow-right js-reviews-carousel-slide"></a>
+        </div>
+    </div>
+    <div class="article-review__right">
+        <p class="article-review__text">{{ article.text }}</p>
+    </div>
+</article>

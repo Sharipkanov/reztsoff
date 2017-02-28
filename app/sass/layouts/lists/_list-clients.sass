@@ -1,0 +1,27 @@
+.list-clients
+	list-style: none
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	align-items: center
+	margin: 0
+	padding: 0
+
+	&__item
+		flex-basis: 25%
+		flex-shrink: 0
+		margin-top: 15px
+
+	&__img
+		filter: grayscale(100%)
+		opacity: .5
+		transition: all .3s ease-in-out
+
+	&__link
+		text-align: center
+		display: inline-block
+		width: 100%
+		&:hover
+			.list-clients__img
+				filter: initial
+				opacity: initial

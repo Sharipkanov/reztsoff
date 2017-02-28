@@ -1,0 +1,33 @@
+.section-contacts
+	min-height: 500px
+	box-sizing: border-box
+	position: relative
+	padding: 60px 0 40px 0
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		z-index: 1
+		display: block
+		width: 50%
+		top: 0
+		bottom: 0
+
+	&::before
+		left: 0
+		background-color: $color-white
+
+	&::after
+		right: 0
+		background-color: $color-orange
+
+	&__container
+		position: relative
+		z-index: 4
+
+	.callback
+		margin: 0 0 0 75px
+
+	.list-clients
+		margin-left: -15px

@@ -1,0 +1,66 @@
+.section-about
+	min-height: 655px
+	width: 100%
+	position: relative
+	padding: 92px 0 100px 0
+	box-sizing: border-box
+
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		z-index: 1
+		display: block
+		width: 50%
+		top: 0
+		bottom: 0
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+
+	&::before
+		left: 0
+		background-image: linear-gradient(to bottom, rgba($color-orange, .9), rgba($color-orange, .9)), url('../images/section-about-before-bg.jpg')
+
+	&::after
+		right: 0
+		background-image: linear-gradient(to bottom, rgba($color-blue-dark, .8), rgba($color-blue-dark, .8)), url('../images/section-about-after-bg.jpg')
+
+	&__container
+		position: relative
+		z-index: 4
+
+	&__icon
+		position: absolute
+		top: 0
+		left: calc(50% - 165px)
+		z-index: 3
+
+	&__rectangle
+		position: absolute
+		bottom: 0
+		left: calc(50% - 135px)
+		width: 135px
+		height: calc(100% - 564px)
+		background-color: $color-orange-darker
+		z-index: 3
+
+	&__arrow
+		position: absolute
+		left: 50%
+		bottom: 25px
+		margin-left: -38px
+		z-index: 4
+
+	.section__title
+		margin-bottom: 47px
+
+	.trapeze
+		float: right
+		margin-top: -38px
+
+	.section__btns
+		margin-top: 89px
+
+	.button + .button
+		margin-left: 40px

@@ -1,0 +1,56 @@
+.article-review
+	width: 825px
+	margin: 0 auto
+	display: flex
+
+	&__left
+		width: 200px
+		margin-right: 50px
+		position: relative
+
+	&__right
+		width: calc(100% - 250px)
+
+	&__user
+		text-align: right
+		font-family: 'Fira Sans Bold', sans-serif
+		font-size: 18px
+		line-height: 1.3
+
+	&__text
+		font-family: 'Fira Sans Book', sans-serif
+		font-size: 12px
+		margin-top: 18px
+		line-height: 1.5
+		color: #000001
+
+	&__numbers
+		position: absolute
+		bottom: 20px
+		right: 0
+		display: flex
+		align-items: center
+		font-size: 14px
+		font-family: 'Fira Sans Regular', sans-serif
+		color: #6b6b6b
+
+	&__arrow-left
+		+sprite($arrow-left-light)
+		margin-right: 20px
+
+		&:hover
+			+sprite($arrow-left-dark)
+
+	&__arrow-right
+		margin-left: 20px
+		+sprite($arrow-right-light)
+
+		&:hover
+			+sprite($arrow-right-dark)
+
+	&__current
+		color: $color-orange
+		margin-right: 5px
+
+	&__count
+		margin-left: 5px

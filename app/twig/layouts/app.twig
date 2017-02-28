@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1097">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block pageTitle %}{% endblock %}</title>
+
+    <!-- Stylesheets -->
+    {% include "stylesheets.twig" %}
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header block -->
+        {% include "header.twig" %}
+        <!-- Header block end -->
+
+        <!-- Block content -->
+        {% block content %}{% endblock %}
+        <!-- Block content end -->
+
+        <!-- Footer block -->
+        {% include "footer.twig" %}
+        <!-- Footer block end -->
+
+        <!-- Popups -->
+        {% include "../includes/popups/popup-index.twig" %}
+        <!-- Popups block end -->
+    </div>
+
+    <!-- Scripts -->
+    {% include "scripts.twig" %}
+</body>
+</html>

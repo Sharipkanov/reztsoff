@@ -1,0 +1,13 @@
+<header class="header">
+    <div class="header__top-bar">
+        <div class="container">
+            {% include '../includes/navigation.twig' %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="header__bottom-bar">
+            {% include '../includes/logo.twig' with {'src': 'images/logo.png', 'alt': 'Логотип'} %}
+            {% include '../includes/contacts.twig' %}
+        </div>
+    </div>
+</header>

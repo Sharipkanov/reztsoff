@@ -1,0 +1,76 @@
+body
+	font-family: 'Fira Sans Book', sans-serif
+	background: $color-white
+	font-size: 14px
+
+.wrapper
+	max-width: 100%
+	width: 100%
+	min-width: 1097px
+	overflow: hidden
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+
+.container
+	width: 1097px
+	padding: 0 15px
+	box-sizing: border-box
+	margin: 0 auto
+
+.button
+	display: inline-flex
+	align-items: center
+	text-transform: uppercase
+	position: relative
+	background: transparent
+	font-family: 'Fira Sans Medium', sans-serif
+	border: 2px solid $color-white
+	transform: perspective(1px) translateZ(0)
+	transition: color .3s
+	padding: 9px
+	cursor: pointer
+	text-decoration: none
+	border-radius: 30px
+	overflow: hidden
+	color: $color-dark
+	max-width: 201px
+	width: 100%
+	justify-content: center
+	text-align: center
+	box-sizing: border-box
+	height: 56px
+	outline: none
+
+	&::before
+		content: ""
+		position: absolute
+		z-index: -1
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: $color-white
+		transform: scaleY(0)
+		transform-origin: 50% 100%
+		transition: transform .3s ease-out
+
+	&:hover
+		&::before
+			transform: scaleY(1)
+
+.trapeze
+	+sprite($trapeze)
+	padding: 32px 65px 32px 90px
+	box-sizing: border-box
+
+	&__text
+		font-weight: normal
+		font-family: 'Fira Sans BoldItalic', sans-serif
+		font-size: 22px
+		margin: 0
+		color: $color-white
+		text-transform: lowercase
+		
+		&:first-letter
+			text-transform: uppercase

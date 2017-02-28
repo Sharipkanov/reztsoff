@@ -1,0 +1,28 @@
+.list-default
+	list-style: none
+	margin: 0
+	padding: 0
+
+	&__item
+		font-size: 12px
+		font-family: 'Fira Sans Book', sans-serif
+		color: #1a1a1a
+		padding-left: 30px
+		box-sizing: border-box
+		position: relative
+
+		&::before
+			content: '\00AF'
+			display: inline-block
+			position: absolute
+			left: 13px
+			top: 5px
+
+		+ .list-default__item
+			margin-top: 15px
+
+	&__title
+		font-size: 12px
+		font-family: 'Fira Sans Book', sans-serif
+		color: #1a1a1a
+		margin-bottom: 15px

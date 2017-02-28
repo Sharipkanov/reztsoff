@@ -1,0 +1,51 @@
+.contacts
+	width: 315px
+	text-align: right
+	font-family: 'Fira Sans Italic', sans-serif
+	font-size: 14px
+	color: $color-grey
+	display: block
+
+	.contacts__phone
+		display: block
+		text-decoration: none
+		color: $color-orange
+		font-family: 'Fira Sans Bold', sans-serif
+		font-size: 26px
+		margin: 0 0 1px 0
+
+		&:hover
+			text-decoration: none
+
+	.contacts__link
+		font-size: 14px
+		display: inline-block
+		text-decoration: none
+		font-family: 'Fira Sans Italic', sans-serif
+		position: relative
+		color: $color-black
+
+		&::after,
+		&::before
+			content: ''
+			height: 2px
+			position: absolute
+			bottom: -1px
+			left: 0
+
+		&::after
+			width: 100%
+			z-index: 1
+			background-color: $color-grey
+
+		&::before
+			transition: width .3s ease-in-out
+			width: 0
+			z-index: 2
+			background-color: $color-orange
+		
+		&:hover
+			text-decoration: none
+
+			&::before
+				width: 100%

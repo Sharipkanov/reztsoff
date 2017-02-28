@@ -1,0 +1,45 @@
+.list-info
+	list-style: none
+	display: flex
+	flex-wrap: wrap
+	margin: 110px 0 0 10px
+	padding: 0
+
+	&__item
+		height: 175px
+		flex-basis: 135px
+		flex-shrink: 0
+
+		+ .list-info__item
+			margin-left: 33px
+
+		&:nth-child(1)
+			margin-top: 20px
+
+			.list-info__icon
+				margin-bottom: 43px
+
+		&:nth-child(2)
+			margin-top: 20px
+
+			.list-info__icon
+				margin-bottom: 34px
+
+	&__icon
+		vertical-align: middle
+		margin-bottom: 41px
+
+	&__link
+		display: block
+		font-size: 14px
+		color: $color-dark
+		transition: color .3s ease-in-out
+		line-height: 1.5
+		font-family: 'Fira Sans Italic', sans-serif
+		text-transform: lowercase
+		
+		&:first-letter
+			text-transform: uppercase
+
+		&:hover
+			color: $color-orange

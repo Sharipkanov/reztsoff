@@ -1,0 +1,28 @@
+.grid-popup
+	width: 640px
+	margin: 0 auto
+	display: flex
+	flex-wrap: wrap
+	height: calc(100% - 70px)
+
+	&__left
+		width: calc(100% - 360px)
+		padding-right: 60px
+		box-sizing: border-box
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: flex-end
+
+	&__right
+		width: 360px
+		flex-grow: 0
+		flex-shrink: 0
+		box-sizing: border-box
+		padding-left: 60px
+		border-left: 2px solid $color-black
+		display: flex
+		justify-content: center
+		flex-direction: column
+		align-items: flex-end
+

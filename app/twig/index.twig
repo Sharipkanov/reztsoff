@@ -1,0 +1,348 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+
+{% block content %}
+    <!-- Section about -->
+    <section class="section section-about" id="about-us">
+        <i class="section-about__icon fri fri-large-r"></i>
+        <a href="#technologies" class="section-about__arrow js-scroll-section"><i class="fri fri-arrow-down"></i></a>
+        <div class="section-about__rectangle"></div>
+        <div class="section-about__container container">
+            <h1 class="section__title section__title_light">Промышленное <br>проектирование <br>на основе BIM технологий.</h1>
+            <div class="grid-double">
+                <div class="grid-double__item">
+                    <p class="section__text section__text_large section__text_light">
+                        <span class="section__text_bold">Компания «Резцофф»</span> - предприятие полного цикла. <br>
+                        Основная специализация – промышленное <br>
+                        проектирование, строительство производственных <br>
+                        объектов «под ключ».
+                    </p>
+                    <p class="section__text section__text_large section__text_light">Успешно работаем с 2004 года.</p>
+                    <div class="section__btns">
+                        <a href="#" class="button js-open-popup" data-popup-name="popup-project">О компании</a>
+                        <a href="#" class="button">Калькулятор</a>
+                    </div>
+                </div>
+                <div class="grid-double__item">
+                    <div class="trapeze">
+                        <p class="trapeze__text">Оптимизируйте <br> стоимость <br> строительства <br>с нами!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Section about end -->
+
+    <!-- Section technologies -->
+    <section class="section section-technologies" id="technologies">
+        <div class="container">
+            <div class="grid-double">
+                <div class="grid-double__item">
+                    <p class="section__title section__title_line_down">Технологии <br>и надежность</p>
+                    {% include 'includes/lists/list-info.twig' %}
+                </div>
+                <div class="grid-double__item">
+                    {% include 'includes/lists/list.twig' %}
+                </div>
+            </div>
+        </div>
+    </section><!-- Section technologies end -->
+
+    <!-- Section branches -->
+    <section class="section section-branches" id="branches">
+        <div class="container">
+            <div class="grid-double">
+                <div class="grid-double__item">
+                    <p class="section__title section__title_orange section__title_line_down">Разрабатываем <br>проекты</p>
+                </div>
+                <div class="grid-double__item">
+                    <p class="section__text section__text_light">
+                        Проектирование зданий, сооружений - основа будущего строения. Грамотный проект обеспечивает надежность, безопасность и долговечность строения.
+                        <br>Комплексно проектируем объекты промышленного назначения, основываясь на 12-летнем опыте работ, с учетом ваших пожеланий. Разрабатываем проектные решения, направленные на оптимизацию расходов строительства. Проектируем и строим "под ключ".
+                    </p>
+                </div>
+            </div>
+            <div class="grid-article">
+                {% set BranchArticles = [
+                    {
+                        "img": "images/articles/1.jpg",
+                        "title": "Проекты заводов, фабрик, производственных зданий",
+                        "info": "Главный аспект при проектировании - эффективность технологического процесса, безопасные и комфортные условия работы на предприятии."
+                    },
+                    {
+                        "img": "images/articles/2.jpg",
+                        "title": "Проекты сельскохозяйственных зданий",
+                        "info": "Главный аспект – учет воздействия агрессивной среды от пребывания животных, а также удобное расположение ряда объектов на заданной территории."
+                    },
+                    {
+                        "img": "images/articles/3.jpg",
+                        "title": "Проекты офисно-административных зданий",
+                        "info": "Основной аспект при проектировании - создание комфортного комфортных условий пребывания людей в помещении, обеспечение безопасности сотрудников и посетителей."
+                    },
+                    {
+                        "img": "images/articles/4.jpg",
+                        "title": "Проекты логистических комплексов",
+                        "info": "Основной аспект – удобство хранения и перемещения грузов, транспортная доступность."
+                    },
+                    {
+                        "img": "images/articles/5.jpg",
+                        "title": "Проекты автосалонов и паркингов",
+                        "info": "Главный аспект в работе с данными объектами – эстетический вид здания и прилегающей территории, удобство и компактность."
+                    },
+                    {
+                        "img": "images/articles/6.jpg",
+                        "title": "Проекты складов, складских комплексов",
+                        "info": "Главный аспект - разработка оптимальной технологической схемы работы склада."
+                    }
+                ] %}
+
+                {% for article in BranchArticles %}
+                   <div class="grid-article__item">
+                       {% include 'includes/articles/article.twig' with {"article": article} %}
+                   </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section><!-- Section branches end -->
+
+    <!-- Section directions -->
+    <section class="section section-directions" id="directions">
+        <div class="container">
+            <p class="section__title">Основные направления <br>проектирования</p>
+            {% set DirectionsArticles = [
+                {
+                    "number": "1.",
+                    "title": "Генеральное проектирование",
+                    "info": "Проектная документация необходима для получения разрешения на строительство.<br><br> На данном этапе, на основании технического задания от клиента, определяется внешний вид здания. Уточняется зонирование пространства, элементы конструкций, отделочные материалы, схемы инженерных сетей и коммуникаций. Готовятся документы, необходимые для согласования строительства в государственных органах."
+                },
+                {
+                    "number": "2.",
+                    "title": "Разработка проектной документации",
+                    "info": "Проектная документация необходима для получения разрешения на строительство.<br><br> На данном этапе, на основании технического задания от клиента, определяется внешний вид здания. Уточняется зонирование пространства, элементы конструкций, отделочные материалы, схемы инженерных сетей и коммуникаций. Готовятся документы, необходимые для согласования строительства в государственных органах."
+                },
+                {
+                    "number": "3.",
+                    "title": "Разработка рабочей документации",
+                    "info": "Проектная документация необходима для получения разрешения на строительство.<br><br> На данном этапе, на основании технического задания от клиента, определяется внешний вид здания. Уточняется зонирование пространства, элементы конструкций, отделочные материалы, схемы инженерных сетей и коммуникаций. Готовятся документы, необходимые для согласования строительства в государственных органах."
+                },
+                {
+                    "number": "4.",
+                    "title": "Проектирование реконструкции",
+                    "info": "Проектная документация необходима для получения разрешения на строительство.<br><br> На данном этапе, на основании технического задания от клиента, определяется внешний вид здания. Уточняется зонирование пространства, элементы конструкций, отделочные материалы, схемы инженерных сетей и коммуникаций. Готовятся документы, необходимые для согласования строительства в государственных органах."
+                },
+                {
+                    "number": "5.",
+                    "title": "Проектирование систем",
+                    "info": "Проектная документация необходима для получения разрешения на строительство.<br><br> На данном этапе, на основании технического задания от клиента, определяется внешний вид здания. Уточняется зонирование пространства, элементы конструкций, отделочные материалы, схемы инженерных сетей и коммуникаций. Готовятся документы, необходимые для согласования строительства в государственных органах."
+                },
+                {
+                    "number": "6.",
+                    "title": "Авторский надзор, техническое сопровождение строительства, консультации по техническим вопросам",
+                    "info": "Проектная документация необходима для получения разрешения на строительство.<br><br> На данном этапе, на основании технического задания от клиента, определяется внешний вид здания. Уточняется зонирование пространства, элементы конструкций, отделочные материалы, схемы инженерных сетей и коммуникаций. Готовятся документы, необходимые для согласования строительства в государственных органах."
+                },
+                {
+                    "number": "7.",
+                    "title": "BIM проектирование",
+                    "info": "Проектная документация необходима для получения разрешения на строительство.<br><br> На данном этапе, на основании технического задания от клиента, определяется внешний вид здания. Уточняется зонирование пространства, элементы конструкций, отделочные материалы, схемы инженерных сетей и коммуникаций. Готовятся документы, необходимые для согласования строительства в государственных органах."
+                },
+                {
+                    "number": "8.",
+                    "title": "Строительство",
+                    "info": "Проектная документация необходима для получения разрешения на строительство.<br><br> На данном этапе, на основании технического задания от клиента, определяется внешний вид здания. Уточняется зонирование пространства, элементы конструкций, отделочные материалы, схемы инженерных сетей и коммуникаций. Готовятся документы, необходимые для согласования строительства в государственных органах."
+                }
+            ] %}
+            <div class="grid-directions">
+            {% for article in DirectionsArticles %}
+                <div class="grid-directions__item">{% include 'includes/articles/article-direction.twig' with {"article": article} %}</div>
+            {% endfor %}
+            </div>
+        </div>
+    </section><!-- Sections directions end -->
+
+    <!-- Section licenses -->
+    <section class="section section-licenses">
+        <div class="container">
+            <div class="grid-licenses">
+                <div class="grid-licenses__left" id="licenses">
+                    <p class="section__title section__title_small section__title_line_down">Лицензии и <br>сертификаты</p>
+                    {% set licencesArticles = [
+                    {
+                        "title": "Свидетельство-СРО-на-проектирование.jpg",
+                        "img": "images/licences/7.jpg"
+                    },
+                    {
+                        "title": "Certificate of Construction Permit",
+                        "img": "images/licences/1.jpg"
+                    },
+                    {
+                        "title": "Annex to the Certificate of Construction Permit list 1",
+                        "img": "images/licences/2.jpg"
+                    },
+                    {
+                        "title": "Annex to the Certificate of Construction Permit list 2",
+                        "img": "images/licences/3.jpg"
+                    },
+                    {
+                        "title": "Annex to the Certificate of Construction Permit list 3",
+                        "img": "images/licences/4.jpg"
+                    },
+                    {
+                        "title": "Annex to the Certificate of Construction Permit list 4",
+                        "img": "images/licences/5.jpg"
+                    },
+                    {
+                        "title": "Annex to the Certificate of Construction Permit list 5",
+                        "img": "images/licences/6.jpg"
+                    }
+                    ] %}
+                    <div class="licenses-carousel owl-carousel">
+                        {% for article in licencesArticles %}
+                            <div>{% include './includes/certificate.twig' with {"article": article} %}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="grid-licenses__right" id="benefits">
+                    <p class="section__title section__title_small">Почему нас выбирают</p>
+                    <p class="section__title-info  section__title-info_line_down">Основные преимущества нашей компании</p>
+                    {% set DirectionsArticles = [
+                        {
+                            "icon": "fri-wallet",
+                            "title": "Оптимизируем стоимость строительства.",
+                            "info": "Снижаем затраты на строительство за счет грамотных проектных решений."
+                        },
+                        {
+                            "icon": "fri-clock",
+                            "title": "Проектируем точно в срок.",
+                            "info": "Вовремя завершаем проекты различного уровня сложности."
+                        },
+                        {
+                            "icon": "fri-pencil",
+                            "title": "Применяем решения, проверенные временем.",
+                            "info": "Мы не только проектируем, но и строим."
+                        },
+                        {
+                            "icon": "fri-factory",
+                            "title": "Только промышленное проектирование.",
+                            "info": "Профессионально проектируем на основе 12-летнего опыта промышленного строительства."
+                        },
+                        {
+                            "icon": "fri-document",
+                            "title": "Тесно сотрудничаем с Заказчиком на всех <br> этапах проектирования.",
+                            "info": "Применяем эффективные системы управления проектом. Умеем не только говорить, но и слушать."
+                        }
+                    ] %}
+
+                    <div class="grid-reason">
+                        {% for article in DirectionsArticles %}
+                            <div class="grid-reason__item">{% include 'includes/articles/article-reason.twig' with {"article": article} %}</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- Section licenses end -->
+
+    <!-- Section reviews -->
+    <section class="section section-reviews" id="reviews">
+        <div class="container">
+            <p class="section__title section__title_small section__title_center">Партнеры о нас</p>
+            <p class="section__title-info section__title-info_center section__title-info_line_down">Отзывы и благодарности компании «Резцофф»</p>
+
+            {% set ArticlesReview = [
+                {
+                    "user": "Апостолов С.А. <br>Генеральный директор <br> ООО «Стройресурс»",
+                    "text": "Благодарим проектный отдел компании «Резцофф» за профессионализм, оперативность и результат при выполнении работ для ООО «Стройресурс».<br><br>Хотим отметить ООО «Резцофф» как ответственную и исполнительную организацию, где каждый сотрудник – профессионал своего дела.</br>Только благодаря слаженной работе и грамотности инженерно-технического персонала, проектная документация была выполнена качественно и в установленные договорными отношениями сроки.<br>Планируем дальнейшую плодотворную работы с вашей компанией и желаем вам больше новых и интересных проектов!",
+                    "current": 1
+                },
+                {
+                    "user": "Апостолов С.А. <br>Генеральный директор <br> ООО «Стройресурс»",
+                    "text": "Благодарим проектный отдел компании «Резцофф» за профессионализм, оперативность и результат при выполнении работ для ООО «Стройресурс».<br><br>Хотим отметить ООО «Резцофф» как ответственную и исполнительную организацию, где каждый сотрудник – профессионал своего дела.</br>Только благодаря слаженной работе и грамотности инженерно-технического персонала, проектная документация была выполнена качественно и в установленные договорными отношениями сроки.<br>Планируем дальнейшую плодотворную работы с вашей компанией и желаем вам больше новых и интересных проектов!",
+                    "current": 2
+                }
+            ] %}
+            <div class="reviews-carousel owl-carousel">
+                {% for article in ArticlesReview %}
+                    <div>
+                        {% include 'includes/articles/article-review.twig' with {"article": article, "count": ArticlesReview.length} %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section><!-- Section reviews end -->
+
+    <!-- Section projects -->
+    <section class="section section-projects" id="projects">
+        {% set ProjectsArticles = [
+            {
+                "img": "images/article-projects/1.jpg",
+                "title": "ООО 'Волжский терминал'",
+                "text": "Генподряд по технологии и внутренней инженерии здания.",
+                "link": "http://www.reztsoff.ru"
+            },
+            {
+                "img": "images/article-projects/2.jpg",
+                "title": "ООО 'Волжский терминал'",
+                "text": "Генподряд по технологии и внутренней инженерии здания.",
+                "link": "http://www.reztsoff.ru"
+            },
+            {
+                "img": "images/article-projects/3.jpg",
+                "title": "ООО 'Волжский терминал'",
+                "text": "Генподряд по технологии и внутренней инженерии здания.",
+                "link": "http://www.reztsoff.ru"
+            },
+            {
+                "img": "images/article-projects/4.jpg",
+                "title": "ООО 'Волжский терминал'",
+                "text": "Генподряд по технологии и внутренней инженерии здания.",
+                "link": "http://www.reztsoff.ru"
+            },
+            {
+                "img": "images/article-projects/5.jpg",
+                "title": "ООО 'Волжский терминал'",
+                "text": "Генподряд по технологии и внутренней инженерии здания."
+            },
+            {
+                "img": "images/article-projects/6.jpg",
+                "title": "ООО 'Волжский терминал'",
+                "text": "Генподряд по технологии и внутренней инженерии здания.",
+                "link": "http://www.reztsoff.ru"
+            }
+        ] %}
+        {% for project in ProjectsArticles %}
+            <div class="section-projects__item">
+                {% include 'includes/articles/article-thumbnail.twig' with {"article": project} %}
+            </div>
+        {% endfor %}
+        {% for project in ProjectsArticles | reverse %}
+            <div class="section-projects__item">
+                {% include 'includes/articles/article-thumbnail.twig' with {"article": project} %}
+            </div>
+        {% endfor %}
+    </section><!-- Section projects end -->
+
+    <!-- Section contacts -->
+    <section class="section section-contacts" id="contacts">
+        <div class="section-contacts__container container">
+            <div class="grid-double">
+                <div class="grid-double__item">
+                    <p class="section__title section__title_small">Нам доверяют</p>
+                    <p class="section__title-info">Партнеры и клиенты нашей компании</p>
+
+                    {% include 'includes/lists/list-clients.twig' %}
+                </div>
+                <div class="grid-double__item">
+                    <div class="callback">
+                        <p class="callback__title">Уточнить информацию <br>о стоимости и сроках <br>проектирования вы можете <br>по телефону:</p>
+                        <div><a href="tel:+7 (495) 795-87-55" class="callback__phone">+7 (495) 795-87-55</a></div>
+                        <div><a href="#" class="button js-open-popup" data-popup-name="popup-callback">Заказать звонок</a></div>
+                        <p class="callback__text">
+                            Также вы можете написать нам: <br>
+                            <a href="mailto:proekt@reztsoff.ru" class="callback__link">proekt@reztsoff.ru</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
