@@ -12,3 +12,9 @@
 
 	.list
 		float: right
+		counter-reset: li
+
+	.list__number
+		&:before
+			counter-increment: li
+			content: counter(li)"."

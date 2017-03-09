@@ -89,12 +89,12 @@ gulp.task('sass', function () {
 		.pipe(plumber({
 			errorHandler: onError
 		}))
+		.pipe(sourcemaps.init())
 		.pipe(sass({outputStyle: 'compressed'}))
 		.pipe(prefix({
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-		.pipe(sourcemaps.init())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(sources.css.dist))
 		.pipe(browserSync.reload({stream: true}));

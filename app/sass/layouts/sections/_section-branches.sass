@@ -11,6 +11,9 @@
 	.section__title
 		line-height: 1.08
 
+	.grid-article
+		justify-content: flex-start
+
 	.section__text
 		margin-top: 4px
 		width: 450px
@@ -19,3 +22,8 @@
 
 	.grid-article__item
 		margin-top: 65px
+		flex-basis: auto
+		width: 28.1%
+
+		&:not(:nth-child(3n))
+			margin-right: 7.85%
