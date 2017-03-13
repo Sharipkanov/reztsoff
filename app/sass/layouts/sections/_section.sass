@@ -1,81 +1,89 @@
 .section
 	background-color: $color-white
 
-	&__title
-		font-weight: normal
-		font-size: 60px
-		font-family: 'Fira Sans ExtraLight', sans-serif
-		color: $color-dark
-		margin: 0
-		line-height: 1.167
-		text-transform: lowercase
-		&:first-letter
-			text-transform: uppercase
-		&_center
-			margin: 0 auto
-			text-align: center
-			&.section__title_line_down
-				&::after
-					margin: 40px auto 0 auto
-		&_line_down
-			&::after
-				content: ''
-				display: block
-				background-color: $color-orange
-				width: 25px
-				height: 3px
-				margin: 40px 0 0 3px
-		&_light
-			color: $color-white
-		&_orange
-			color: $color-orange
-			&.section__title_line_down
-				&::after
-					background-color: $color-light
+.section__title
+	font-weight: normal
+	font-size: 60px
+	font-family: 'Fira Sans ExtraLight', sans-serif
+	color: $color-dark
+	margin: 0
+	line-height: 1.167
+	text-transform: lowercase
+	&:first-letter
+		text-transform: uppercase
 
-		&_small
-			font-size: 32px
-			font-family: "Fira Sans Medium", sans-serif
-			color: #3d3c3b
-			&.section__title_line_down
-				&::after
-					margin: 20px 0 0 3px
+.section__title_center
+	margin: 0 auto
+	text-align: center
+	&.section__title_line_down
+		&::after
+			margin: 40px auto 0 auto
 
-		&-info
-			display: block
-			font-family: 'Fira Sans Book', sans-serif
-			color: #909090
-			font-size: 18px
-			margin-top: 5px
-			&_center
-				margin: 0 auto
-				text-align: center
-				&.section__title-info_line_down
-					&::after
-						margin: 20px auto 0 auto
+.section__title_line_down
+	&::after
+		content: ''
+		display: block
+		background-color: $color-orange
+		width: 25px
+		height: 3px
+		margin: 40px 0 0 3px
 
-			&_line_down
-				&::after
-					content: ''
-					display: block
-					background-color: $color-orange
-					width: 25px
-					height: 3px
-					margin: 20px 0 0 3px
+.section__title_light
+	color: $color-white
 
-	&__text
-		font-family: 'Fira Sans Book', sans-serif
-		font-size: 14px
-		color: $color-dark
-		margin: 0
-		&_light
-			color: $color-white
-		&_large
-			font-size: 18px
-			line-height: 1.4
-		&_bold
-			font-family: 'Fira Sans Bold', sans-serif
-			font-weight: normal
+.section__title_orange
+	color: $color-orange
+	&.section__title_line_down
+		&::after
+			background-color: $color-light
 
-		+ .section__text
-			margin-top: 28px
+.section__title_small
+	font-size: 32px
+	font-family: "Fira Sans Medium", sans-serif
+	color: #3d3c3b
+	&.section__title_line_down
+		&::after
+			margin: 20px 0 0 3px
+
+.section__title-info
+	display: block
+	font-family: 'Fira Sans Book', sans-serif
+	color: #909090
+	font-size: 18px
+	margin-top: 5px
+
+.section__title-info_center
+	margin: 0 auto
+	text-align: center
+	&.section__title-info_line_down
+		&::after
+			margin: 20px auto 0 auto
+
+.section__title_line_down
+	&::after
+		content: ''
+		display: block
+		background-color: $color-orange
+		width: 25px
+		height: 3px
+		margin: 20px 0 0 3px
+
+.section__text
+	font-family: 'Fira Sans Book', sans-serif
+	font-size: 14px
+	color: $color-dark
+	margin: 0
+
+.section__text_light
+	color: $color-white
+
+.section__text_large
+	font-size: 18px
+	line-height: 1.4
+
+.section__text_bold
+	font-family: 'Fira Sans Bold', sans-serif
+	font-weight: normal
+
+	+ .section__text
+		margin-top: 28px

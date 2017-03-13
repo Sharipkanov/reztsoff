@@ -1,42 +1,11 @@
 .section-info
-	&__container
-		width: 630px
-
-	&__img
-		margin-bottom: 40px
-
-	&__info
-		font-family: 'Fira Sans Bold', sans-serif
-		font-weight: normal
-		font-size: 14px
-		color: #3d3d3d
-		line-height: 1.5
-		margin-bottom: 30px
-
-	&__text
-		font-family: 'Fira Sans Book', sans-serif
-		font-size: 12px
-		color: #494949
-		line-height: 1.5
-
-		+ .section-info__text
-			margin-top: 30px
-
-		&_larger
-			font-size: 14px
-
-	&__link
-		font-family: 'Fira Sans Italic', sans-serif
-		font-size: 14px
-		color: #1a1a1a
-
 	.section__title
 		font-size: 40px
 		margin-bottom: 40px
 
-		&_line_down
-			&::after
-				margin: 20px 0 0 3px
+	.section__title_line_down
+		&::after
+			margin: 20px 0 0 3px
 
 	.grid-double__item
 		box-sizing: border-box
@@ -47,3 +16,34 @@
 
 	.list-default
 		margin: 30px 0
+
+.section-info__container
+	width: 630px
+
+.section-info__img
+	margin-bottom: 40px
+
+.section-info__info
+	font-family: 'Fira Sans Bold', sans-serif
+	font-weight: normal
+	font-size: 14px
+	color: #3d3d3d
+	line-height: 1.5
+	margin-bottom: 30px
+
+.section-info__text
+	font-family: 'Fira Sans Book', sans-serif
+	font-size: 12px
+	color: #494949
+	line-height: 1.5
+
+	+ .section-info__text
+		margin-top: 30px
+
+.section-info__text_larger
+	font-size: 14px
+
+.section-info__link
+	font-family: 'Fira Sans Italic', sans-serif
+	font-size: 14px
+	color: #1a1a1a

@@ -27,10 +27,10 @@
 		visibility: visible
 		opacity: 1
 
-	&__wrapper
-		position: relative
-		display: block
-		height: 100%
+.popup__wrapper
+	position: relative
+	display: block
+	height: 100%
 
 .popup-callback
 	width: 840px
@@ -45,27 +45,27 @@
 	&.opened
 		display: block
 
-	&__close
-		+sprite($remove-light)
-		display: inline-block
-		position: absolute
-		top: 0
-		right: 0
+.popup-callback__close
+	+sprite($remove-light)
+	display: inline-block
+	position: absolute
+	top: 0
+	right: 0
 
-	&__title
-		font-family: 'Roboto Regular', sans-serif
-		font-size: 24px
-		color: #383838
-		text-align: right
-		margin: 30px 0
+.popup-callback__title
+	font-family: 'Roboto Regular', sans-serif
+	font-size: 24px
+	color: #383838
+	text-align: right
+	margin: 30px 0
 
-	&__info
-		font-family: 'Roboto Regular', sans-serif
-		font-size: 14px
-		color: #9b9b9b
-		text-align: right
-		line-height: 1.4
-		margin: 0
+.popup-callback__info
+	font-family: 'Roboto Regular', sans-serif
+	font-size: 14px
+	color: #9b9b9b
+	text-align: right
+	line-height: 1.4
+	margin: 0
 
 	.grid-popup
 		padding-top: 35px
@@ -85,12 +85,12 @@
 	&.opened
 		display: block
 
-	&__close
-		+sprite($remove-light)
-		display: inline-block
-		position: absolute
-		top: 15px
-		right: -50px
+.popup-project__close
+	+sprite($remove-light)
+	display: inline-block
+	position: absolute
+	top: 15px
+	right: -50px
 
 	.popup__wrapper
 		width: 788px
