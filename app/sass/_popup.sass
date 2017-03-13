@@ -45,6 +45,12 @@
 	&.opened
 		display: block
 
+	.grid-popup
+		padding-top: 35px
+
+	.logo
+		width: 160px
+
 .popup-callback__close
 	+sprite($remove-light)
 	display: inline-block
@@ -67,12 +73,6 @@
 	line-height: 1.4
 	margin: 0
 
-	.grid-popup
-		padding-top: 35px
-
-	.logo
-		width: 160px
-
 .popup-project
 	width: 915px
 	margin-left: -457.5px
@@ -85,16 +85,16 @@
 	&.opened
 		display: block
 
-.popup-project__close
-	+sprite($remove-light)
-	display: inline-block
-	position: absolute
-	top: 15px
-	right: -50px
-
 	.popup__wrapper
 		width: 788px
 		margin: 0 auto
 
 	.section-info
 		background: transparent
+
+.popup-project__close
+	+sprite($remove-light)
+	display: inline-block
+	position: absolute
+	top: 15px
+	right: -50px

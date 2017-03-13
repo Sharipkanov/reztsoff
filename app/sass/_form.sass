@@ -2,6 +2,16 @@
 	width: 100%
 	display: block
 
+	.button
+		box-shadow: inset 0 0 0 2px #ababab
+
+		&::before
+			background: $color-orange
+
+		&:hover
+			color: $color-light
+			box-shadow: inset 0 0 0 2px $color-orange
+
 .form__group
 	display: block
 
@@ -25,13 +35,3 @@
 	display: inline-block
 	margin-top: 5px
 	margin-left: 5px
-
-	.button
-		border-color: #ababab
-
-		&::before
-			background: $color-orange
-
-		&:hover
-			color: $color-light
-			border-color: $color-orange
